@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArkHunters | 5x · 6man · PVE-PVP</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#home" data-page="home"><img src="assets/logo.png" alt="ArkHunters"><span>ArkHunters</span></a>
+  <nav id="nav">
+    <a href="#home" data-page="home" data-i18n="nav_home">Home</a>
+    <a href="#news" data-page="news" data-i18n="nav_news">News</a>
+    <a href="#store" data-page="store" data-i18n="nav_store">Store</a>
+    <a href="#registration" data-page="registration" data-i18n="nav_reg">Registration</a>
+    <a href="#ranking" data-page="ranking" data-i18n="nav_rank">Ranking</a>
+    <a href="#support" data-page="support" data-i18n="nav_support">Support</a>
+    <a href="#wallet" data-page="wallet" data-i18n="nav_wallet">Wallet</a>
+  </nav>
+  <a class="btn small" id="acct-btn" href="#account" data-i18n="nav_login">Log in</a>
+  <div class="lang">
+    <button id="lang-en" class="active">EN</button>
+    <button id="lang-es">ES</button>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section id="home" class="page">
+  <div class="hero" role="img" aria-label="ArkHunters 5X | 6MAN | PVE-PVP"><a class="scroll" href="#info" id="scroll-btn" data-i18n="scroll">▼ Server information</a></div>
+  <div class="wrap" id="info">
+    <h2 data-i18n="home_title">Server information</h2>
+    <div class="grid">
+      <div class="card"><h3>5X</h3><p data-i18n="info_rates">Boosted rates: taming, harvesting, XP and maturation.</p></div>
+      <div class="card"><h3>6 MAN</h3><p data-i18n="info_tribe">Tribes of up to 6 members.</p></div>
+      <div class="card"><h3>PVE-PVP</h3><p data-i18n="info_mode">A mix of PVE and PVP gameplay.</p></div>
+      <div class="card"><h3 data-i18n="info_wipe_t">Wipe every 8 weeks</h3><p data-i18n="info_wipe">A full wipe every 8 weeks keeps every season fresh.</p></div>
+      <div class="card"><h3 data-i18n="info_launch_t">Official launch</h3><p data-i18n="info_launch">November 1st. The beta is already open, see News.</p></div>
+      <div class="card"><h3>Discord</h3><p><a class="btn" href="https://discord.gg/xMgXbANH2" target="_blank" rel="noopener" data-i18n="join_discord">Join our Discord</a></p></div>
+    </div>
+    <div class="rules">
+      <a class="btn big" id="rules-link" href="#" data-i18n="rules_btn">📜 Read the server rules</a>
+      <small data-i18n="rules_note">The rules link will be added soon.</small>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" class="page">
+  <div class="wrap">
+    <h2 data-i18n="nav_news">News</h2>
+    <article class="post">
+      <span class="tag" data-i18n="tag_launch">Official launch</span>
+      <h3 data-i18n="n3_t">Official launch: November 1st</h3>
+      <p data-i18n="n3_p">The official launch is on November 1st. The server wipes every 8 weeks.</p>
+    </article>
+    <article class="post">
+      <span class="tag" data-i18n="tag_ranking">Ranking</span>
+      <h3 data-i18n="n2_t">Ranking starts on November 1st</h3>
+      <p data-i18n="n2_p">Be the first to claim a title!</p>
+    </article>
+    <article class="post">
+      <span class="tag" data-i18n="tag_beta">Beta</span>
+      <h3 data-i18n="n1_t">Beta launch: October 10th</h3>
+      <p data-i18n="n1_p">Join and claim anything you want. Help us perfect the server and win a VIP 1 pass for the official launch.</p>
+    </article>
+    <article class="post">
+      <span class="tag" data-i18n="tag_tribes">Tribes</span>
+      <h3 data-i18n="n4_t">Register your tribe</h3>
+      <p data-i18n="n4_p">Remember to register your tribe on Discord via ticket, or on the Registration page of this website.</p>
+    </article>
+  </div>
+</section>
+
+<!-- STORE -->
+<section id="store" class="page">
+  <div class="wrap">
+    <h2 data-i18n="nav_store">Store</h2>
+    <div class="switch">
+      <button id="sw-points" class="active" data-i18n="store_points">Point Store</button>
+      <button id="sw-vip" data-i18n="store_vip">VIP Store</button>
+    </div>
+    <p class="note" id="store-note"></p>
+    <div class="tabs" id="tabs"></div>
+    <input id="search" type="search" data-i18n-ph="search" placeholder="Search…">
+    <div id="items" class="items"></div>
+  </div>
+</section>
+
+<!-- REGISTRATION -->
+<section id="registration" class="page">
+  <div class="wrap">
+    <h2 data-i18n="nav_reg">Tribe Registration</h2>
+    <form id="reg-form" class="card form">
+      <label><span data-i18n="f_tribe">Tribe name</span><input name="tribe" required maxlength="40"></label>
+      <label><span data-i18n="f_leader">Tribe leader (in-game name)</span><input name="leader" required maxlength="40"></label>
+      <label><span data-i18n="f_discord">Leader's Discord user</span><input name="discord" required maxlength="40"></label>
+      <label><span data-i18n="f_platform">Platform ID (Steam / Epic)</span><input name="platform" required maxlength="60"></label>
+      <label><span data-i18n="f_members">Other members (up to 5, one per line)</span><textarea name="members" rows="5" maxlength="400"></textarea></label>
+      <label><span data-i18n="f_notes">Notes (optional)</span><textarea name="notes" rows="3" maxlength="400"></textarea></label>
+      <button class="btn big" type="submit" data-i18n="f_send">Send registration</button>
+      <p id="reg-status" class="note"></p>
+    </form>
+  </div>
+</section>
+
+<!-- RANKING -->
+<section id="ranking" class="page">
+  <div class="wrap">
+    <h2 data-i18n="nav_rank">Ranking</h2>
+    <p class="note" data-i18n="rank_note">The ranking starts on November 1st. Be the first to claim a title!</p>
+    <div class="grid" id="rank-grid"></div>
+  </div>
+</section>
+
+<!-- ACCOUNT -->
+<section id="account" class="page">
+  <div class="wrap narrow">
+    <h2 data-i18n="acct_title">My account</h2>
+    <div id="acct-out">
+      <div class="switch"><button id="tab-login" class="active" data-i18n="nav_login">Log in</button><button id="tab-register" data-i18n="register">Register</button></div>
+      <form id="login-form" class="card form">
+        <label><span data-i18n="f_user">Username</span><input name="user" required autocomplete="username"></label>
+        <label><span data-i18n="f_pass">Password</span><input name="pass" type="password" required autocomplete="current-password"></label>
+        <button class="btn big" type="submit" data-i18n="nav_login">Log in</button>
+        <p class="note acct-msg"></p>
+      </form>
+      <form id="register-form" class="card form" style="display:none">
+        <label><span data-i18n="f_user">Username</span><input name="user" required minlength="3" maxlength="24" autocomplete="username"></label>
+        <label><span data-i18n="f_email">Email</span><input name="email" type="email" required autocomplete="email"></label>
+        <label><span data-i18n="f_gamertag">In-game name</span><input name="ign" maxlength="40"></label>
+        <label><span data-i18n="f_pass">Password</span><input name="pass" type="password" required minlength="6" autocomplete="new-password"></label>
+        <label><span data-i18n="f_pass2">Repeat password</span><input name="pass2" type="password" required minlength="6" autocomplete="new-password"></label>
+        <button class="btn big" type="submit" data-i18n="register">Register</button>
+        <p class="note acct-msg"></p>
+      </form>
+    </div>
+    <div id="acct-in" class="card center" style="display:none">
+      <h3 id="acct-name"></h3>
+      <p id="acct-info" class="note"></p>
+      <button class="btn" id="logout-btn" data-i18n="logout">Log out</button>
+    </div>
+    <p class="note" data-i18n="acct_note">Demo accounts are saved only in this browser. Real accounts shared across devices need a server, which we can connect later.</p>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section id="support" class="page">
+  <div class="wrap">
+    <h2 data-i18n="nav_support">Support</h2>
+    <div class="card center">
+      <p data-i18n="sup_p">Need help? Contact us on our Discord channel.</p>
+      <a class="btn big" href="https://discord.gg/xMgXbANH2" target="_blank" rel="noopener">https://discord.gg/xMgXbANH2</a>
+    </div>
+  </div>
+</section>
+
+<!-- WALLET -->
+<section id="wallet" class="page">
+  <div class="wrap">
+    <h2 data-i18n="nav_wallet">Wallet</h2>
+    <div class="grid">
+      <div class="card"><h3 data-i18n="w_cash">Cash balance</h3><div class="big-num">$0.00</div></div>
+      <div class="card"><h3 data-i18n="w_points">Points balance</h3><div class="big-num">0 pts</div></div>
+    </div>
+    <h3 class="sub" data-i18n="w_methods">Payment methods</h3>
+    <div class="grid">
+      <div class="card method"><strong>PayPal</strong><span data-i18n="soon">Coming soon</span></div>
+      <div class="card method"><strong data-i18n="w_card">Credit / debit card</strong><span data-i18n="soon">Coming soon</span></div>
+      <div class="card method"><strong data-i18n="w_other">Other methods</strong><span data-i18n="soon">Coming soon</span></div>
+    </div>
+    <p class="note" data-i18n="w_note">Balances shown here are placeholders until the wallet is connected to the server.</p>
+  </div>
+</section>
+</main>
+
+<footer>© ArkHunters · <a href="https://discord.gg/xMgXbANH2" target="_blank" rel="noopener">Discord</a></footer>
+
+<div id="modal" class="modal"><div class="box"><p id="modal-text"></p><button class="btn" id="modal-close" data-i18n="close">Close</button></div></div>
+
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
